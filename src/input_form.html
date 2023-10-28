@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Model Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Input Form</h1>
+    <form method="POST">
+        {% for i in range(20) %}
+        {{ Para[i] }}: <input type="number" name="input_{{ i }}" step="0.01"><br>
+        {% endfor %}
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>
